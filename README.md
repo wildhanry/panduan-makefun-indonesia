@@ -19,6 +19,8 @@ adalah kompetisi. Hadiah hanya dibayar ke entry yang menempati peringkat
 berbayar, dan banyak entry bagus yang pulang tanpa hadiah. Anggap panduan
 ini peta jalannya, bukan jaminan hasilnya.
 
+Mau langsung mulai? Lompat ke [Langkah 1: Buat akunmu](#langkah-1-buat-akunmu).
+
 ## Cara kerja make.fun, singkatnya
 
 Alurnya selalu sama, dari bounty mana pun kamu mulai:
@@ -63,6 +65,12 @@ Agent tidak bisa menggantikan akunmu. Entry masuk atas nama akun make.fun
 milikmu, repositorinya milik akun GitHub-mu, dan hadiahnya dibayar ke
 wallet-mu.
 
+Satu catatan untuk pengguna agent berbasis workspace, misalnya Muse:
+kamu tidak harus duduk di depan komputer untuk memberi instruksi.
+Selama workspace tempat agent-mu bekerja bisa menjalankan kit (ada
+Node.js 22 dan agent bisa menulis berkas di sana), instruksinya boleh
+kamu ketik dari HP, dan agent yang mengerjakan sisanya di workspace itu.
+
 ## Yang perlu disiapkan
 
 - **Satu AI coding agent** yang biasa kamu pakai, misalnya Muse,
@@ -87,7 +95,11 @@ wallet-mu.
 > daftar lewat link itu dan nantinya memenangkan hadiah, make.fun
 > membayarku bonus sebesar 10% dari hadiahmu selama 90 hari pertama, dan
 > bonus itu dibayar make.fun di luar hadiahmu, jadi bagianmu tidak
-> berkurang. Saat panduan ini ditulis, tidak ada bonus pendaftaran untuk
+> berkurang. Satu lagi yang perlu kamu tahu: panduan ini sendiri sedang
+> ikut sebuah bounty di make.fun, dan peringkatnya ditentukan oleh jumlah
+> signup terverifikasi yang datang lewat link ini. Jadi kalau kamu daftar
+> lewat link ini dan pendaftaranmu lolos verifikasi make.fun,
+> pendaftaranmu itu ikut menentukan peringkat panduan ini. Saat panduan ini ditulis, tidak ada bonus pendaftaran untuk
 > pendaftar baru, jadi keuntungan link ini memang di sisiku. Kamu bebas
 > daftar langsung di make.fun tanpa link itu; semua langkah di bawah tetap
 > sama persis.
@@ -197,9 +209,15 @@ Setelah entry jadi, alur kirimnya begini:
 1. Push pekerjaanmu ke repositori GitHub publik, atau siapkan berkas
    sumber, sesuai syarat bounty.
 2. Kemas transkrip sesi dengan perintah `bundle` dari kit.
-3. Jalankan perintah `check` dari kit di komputermu. Pemeriksaan lokal ini
-   menunjukkan masalah yang sama dengan yang akan ditemukan server, jadi
-   perbaiki di sini sebelum mengirim.
+3. Jalankan perintah `check` dari kit di komputermu sebelum mengirim.
+   Pemeriksaan lokal ini memeriksa lisensi repositori, berkas yang wajib
+   ada beserta batas ukurannya, dan gerbang transkrip, lalu mencetak
+   setiap kegagalan beserta cara memperbaikinya. Sebagian hal memang
+   hanya bisa diperiksa server saat kamu submit, misalnya repositori
+   benar-benar publik, pemiliknya adalah akun GitHub yang tertaut dengan
+   akun make.fun-mu, repositori dibuat setelah bounty dibuka, dan
+   entry-mu bukan salinan entry akun lain. Jadi lolos `check` lokal itu
+   langkah yang sangat membantu, bukan jaminan diterima.
 4. Submit lewat formulir di halaman bounty atau perintah `submit` dari
    kit, sebelum deadline.
 
@@ -220,9 +238,20 @@ yang perlu diinstal lagi selain Node.js 22. Tanda perintahmu berhasil:
 daftar pemeriksaan beserta status lolos atau gagalnya satu per satu.
 
 Kalau entry-mu ditolak, statusnya menyebutkan pemeriksaan mana yang gagal
-beserta cara memperbaikinya. Perbaiki, lalu submit lagi. Entry terakhirmu
-sebelum deadline adalah yang dihitung, jadi jangan berhenti hanya karena
-percobaan pertama gagal.
+beserta cara memperbaikinya. Perbaiki, lalu submit lagi, tapi perhatikan
+kuotanya: setiap bounty membatasi jumlah submit per hari (dihitung per
+hari UTC) dan jumlah total per akun, batas pastinya bisa berbeda antar
+akun, dan percobaan yang ditolak pun tetap mengurangi kuota harimu. Sisa
+kuotamu untuk satu bounty bisa dilihat dengan
+`node cli/makefun.mjs status --competition <slug-bounty>`, jadi jangan
+membuang percobaan untuk kesalahan yang sebenarnya bisa ditangkap
+`check` lokal.
+
+Soal entry mana yang akhirnya dihitung: standarnya, submission terakhirmu
+yang diterima sebelum deadline. Kalau ternyata entry sebelumnya yang
+lebih kamu sukai, kamu bisa menunjuknya sebagai entry final lewat
+perintah `final` dari kit sebelum deadline. Setelah deadline lewat,
+pilihan itu terkunci.
 
 ## Langkah 6: Klaim hadiah kalau peringkatmu berbayar
 
