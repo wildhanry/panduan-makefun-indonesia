@@ -7,7 +7,8 @@
 Kamu punya AI agent yang bisa menulis kode, tapi belum tahu kemampuannya bisa
 diuji di mana? make.fun adalah salah satu tempatnya. Di sana ada
 daftar pekerjaan terbuka bernama *bounty*: setiap bounty punya tugas yang
-jelas, batas waktu, dan hadiah USDC untuk entry terbaik.
+jelas, batas waktu, dan hadiah USDC (stablecoin yang nilainya mengikuti
+dolar AS) untuk entry terbaik.
 
 Panduan ini membawamu dari nol sampai siap memberi instruksi pertama ke
 agent-mu. Semua langkah awal bisa kamu lakukan dari HP. Bagian yang butuh
@@ -20,6 +21,9 @@ berbayar, dan banyak entry bagus yang pulang tanpa hadiah. Anggap panduan
 ini peta jalannya, bukan jaminan hasilnya.
 
 Mau langsung mulai? Lompat ke [Langkah 1: Buat akunmu](#langkah-1-buat-akunmu).
+Di langkah itu ada link referral-ku, https://make.fun/r/29b3jrvf
+(kode `29b3jrvf`), lengkap dengan penjelasan apa yang kudapat darinya;
+kamu juga bisa mulai dari link itu kalau mau.
 
 ## Cara kerja make.fun, singkatnya
 
@@ -39,8 +43,12 @@ Alurnya selalu sama, dari bounty mana pun kamu mulai:
    jaringan Solana ke wallet pemenang.
 
 Hadiah bounty berasal dari dana yang dikunci di escrow on-chain saat
-bounty dibuka, jadi jumlah yang tertulis di halaman memang sudah disiapkan
-sebelum kamu mulai.
+bounty dibuka. Escrow di sini artinya penampung dana di jaringan Solana
+(on-chain maksudnya tercatat langsung di jaringan blockchain itu) yang
+mengunci uang hadiah lebih dulu, dan pemenang mengklaimnya dari sana.
+Jadi jumlah yang tertulis di halaman memang sudah disiapkan sebelum kamu
+mulai. Sebagian kecil bounty lama dibayar dari wallet hadiah make.fun,
+dan halaman bounty selalu menuliskan jalur mana yang berlaku.
 
 ## Pembagian tugas: kamu dan agent-mu
 
@@ -92,17 +100,20 @@ kamu ketik dari HP, dan agent yang mengerjakan sisanya di workspace itu.
 > **Daftar lewat link ini:** https://make.fun/r/29b3jrvf
 >
 > Jujur sejak awal: itu link referral-ku, kode `29b3jrvf`. Kalau kamu
-> daftar lewat link itu dan nantinya memenangkan hadiah, make.fun
-> membayarku bonus sebesar 10% dari hadiahmu selama 90 hari pertama, dan
-> bonus itu dibayar make.fun di luar hadiahmu, jadi bagianmu tidak
-> berkurang. Satu lagi yang perlu kamu tahu: panduan ini sendiri sedang
-> ikut sebuah bounty di make.fun, dan peringkatnya ditentukan oleh jumlah
-> signup terverifikasi yang datang lewat link ini. Jadi kalau kamu daftar
-> lewat link ini dan pendaftaranmu lolos verifikasi make.fun,
-> pendaftaranmu itu ikut menentukan peringkat panduan ini. Saat panduan ini ditulis, tidak ada bonus pendaftaran untuk
-> pendaftar baru, jadi keuntungan link ini memang di sisiku. Kamu bebas
-> daftar langsung di make.fun tanpa link itu; semua langkah di bawah tetap
-> sama persis.
+> daftar lewat link itu, make.fun membayarku beberapa hal. Pertama, 0,25
+> USDC untuk signup-mu, untuk 20 signup pertama yang datang lewat link-ku.
+> Kedua, 1 USDC saat kamu pertama kali memenangkan hadiah. Ketiga, kalau
+> kamu memenangkan hadiah dalam 90 hari pertama sejak pendaftaranmu, aku
+> menerima 10% dari hadiah itu. Semua itu dibayar make.fun di luar
+> hadiahmu, jadi bagianmu tidak berkurang. Satu lagi yang perlu kamu
+> tahu: panduan ini sendiri sedang ikut sebuah bounty di make.fun, dan
+> peringkatnya ditentukan oleh jumlah signup terverifikasi yang datang
+> lewat link ini. Jadi kalau kamu daftar lewat link ini dan pendaftaranmu
+> lolos verifikasi make.fun, pendaftaranmu itu ikut menentukan peringkat
+> panduan ini. Kamu sendiri, sebagai pendaftar baru, tidak menerima bonus
+> pendaftaran apa pun dari link ini; keuntungannya memang di sisiku. Kamu
+> bebas daftar langsung di make.fun tanpa link itu; semua langkah di
+> bawah tetap sama persis.
 
 Urutan daftarnya:
 
@@ -112,11 +123,22 @@ Urutan daftarnya:
 2. Masuk dengan GitHub, Google, Apple, Discord, atau wallet Solana.
    Semuanya gratis, dan masuk dengan wallet tidak mengirim transaksi apa
    pun.
-3. Buka profilmu dari avatar di kanan atas. Lengkapi username dan bio
-   singkat supaya akunmu tidak terlihat kosong.
+3. Buka profilmu dari avatar di kanan atas. Pilih username-mu sendiri
+   (jangan biarkan username otomatis dari sistem) dan isi bio singkat.
+   Ini bukan sekadar kosmetik: pemeriksaan make.fun tidak menghitung
+   akun yang diam saja setelah daftar, dan username pilihanmu adalah
+   salah satu tanda akunmu memang dipakai orangnya.
 4. Kalau tadi kamu masuk bukan dengan GitHub, tautkan akun GitHub-mu dari
    profil. Tautkan juga wallet Solana-mu di sana. Dua tautan ini yang
    membuat entry dan hadiahmu nanti nyambung ke orang yang sama: kamu.
+
+Satu hal yang menentukan apakah pendaftaranmu terhitung terverifikasi:
+jangan berhenti di pendaftaran. Akun yang tidak pernah berpartisipasi,
+tidak punya username pilihan, atau tidak aktif lagi sesaat setelah
+daftar tidak dihitung oleh pemeriksaan make.fun. Jadi lanjutkan ke
+Langkah 2, buka satu halaman bounty sampai selesai, dan syukur-syukur
+mulai entry pertamamu. Itulah yang membuat signup-mu benar-benar
+terhitung, untukmu dan untuk siapa pun yang link-nya kamu pakai.
 
 Kenapa link referral harus dibuka sebelum daftar? Karena make.fun mencatat
 kode dari link pertama yang menyentuh browser-mu, dan catatan itu berlaku
@@ -146,9 +168,11 @@ tengah.
 
 ## Langkah 3: Baca syaratnya, lalu ambil kit-nya
 
-Setiap bounty punya kit yang bisa diunduh dari halaman bounty-nya. Di
-dalam kit ada `RULES.txt`, yaitu aturan bounty itu kata per kata, dan
-program `makefun` untuk memeriksa dan mengirim entry.
+Setiap bounty punya kit yang bisa diunduh dari halaman bounty-nya, lewat
+formulir entry di halaman itu. Di komputer, kit yang sama bisa diambil
+dari terminal dengan perintah unduh yang alamatnya memakai slug bounty
+pilihanmu. Di dalam kit ada `RULES.txt`, yaitu aturan bounty itu kata
+per kata, dan program `makefun` untuk memeriksa dan mengirim entry.
 
 Dua kebiasaan yang menyelamatkan banyak entry:
 
@@ -187,9 +211,13 @@ Kalau semua siap, bangun entry-nya di sesi ini, jalankan pemeriksaan
 kit-nya, dan berhenti sebelum submit untuk meminta persetujuanku.
 ```
 
-Berikan instruksi itu ke agent-mu di komputer tempat dia biasa bekerja,
-bukan dari HP: agent yang akan membuka kedua alamat di atas, mengunduh
-kit, dan menulis berkasnya di sana. HP-mu cukup untuk langkah akun dan
+Berikan instruksi itu di tempat agent-mu bekerja. Kalau agent-mu berjalan
+di komputermu, ketik instruksinya dari komputer itu. Kalau agent-mu
+berbasis workspace yang bisa kamu buka dari HP, seperti contoh Muse di
+bagian pembagian tugas tadi, mengetiknya dari HP juga bisa. Yang penting
+bukan alat untuk mengetiknya, melainkan siapa yang bekerja sesudahnya:
+agent yang membuka kedua alamat di atas, mengunduh kit, dan menulis
+berkasnya di workspace-nya. HP-mu sendiri cukup untuk langkah akun dan
 untuk membaca halaman bounty sebelum memilih.
 
 Instruksi seperti ini berguna karena agent mendapat sumber resmi langsung
@@ -241,7 +269,8 @@ Kalau entry-mu ditolak, statusnya menyebutkan pemeriksaan mana yang gagal
 beserta cara memperbaikinya. Perbaiki, lalu submit lagi, tapi perhatikan
 kuotanya: setiap bounty membatasi jumlah submit per hari (dihitung per
 hari UTC) dan jumlah total per akun, batas pastinya bisa berbeda antar
-akun, dan percobaan yang ditolak pun tetap mengurangi kuota harimu. Sisa
+akun, dan percobaan yang ditolak pun umumnya tetap mengurangi kuota
+harimu. Sisa
 kuotamu untuk satu bounty bisa dilihat dengan
 `node cli/makefun.mjs status --competition <slug-bounty>`, jadi jangan
 membuang percobaan untuk kesalahan yang sebenarnya bisa ditangkap
@@ -283,8 +312,9 @@ selalu cek di sana sebelum berasumsi.
 
 ## Soal referral, dijelaskan apa adanya
 
-Setiap akun make.fun punya link referral seperti punyaku di atas. Cara
-kerjanya, sesuai dokumentasi resmi make.fun:
+Setiap akun make.fun punya link referral seperti punyaku,
+https://make.fun/r/29b3jrvf (kode `29b3jrvf`). Cara kerjanya, sesuai
+dokumentasi resmi make.fun:
 
 - Kode dari link pertama yang dibuka pengunjung tercatat di browser-nya
   dan berlaku 60 hari. Akun baru yang dibuat selama kode itu tercatat akan
@@ -296,7 +326,13 @@ kerjanya, sesuai dokumentasi resmi make.fun:
   reward referral.
 - Pemilik kode menerima bagian 10% dari hadiah yang dimenangkan orang yang
   mendaftar lewat link-nya, selama 90 hari sejak pendaftaran, dibayar
-  make.fun di atas hadiah orang itu.
+  make.fun di atas hadiah orang itu. Pemilik kode juga menerima 0,25 USDC
+  untuk setiap signup lewat link-nya (untuk 20 signup pertama) dan 1 USDC
+  saat orang itu pertama kali memenangkan hadiah.
+- Verifikasi tiap signup tidak instan. Keputusan untuk satu signup
+  menunggu masa tinjau 24 jam sejak kode itu terikat ke akun barunya,
+  jadi angka signup terverifikasi di papan bisa berubah setelah kamu
+  mendaftar, bukan pada detik yang sama.
 - Kamu juga akan punya link-mu sendiri di tab Referrals pada profilmu.
   Bagikan dengan cara yang sama: jelaskan terus terang bahwa itu link
   referral-mu.
@@ -306,7 +342,8 @@ kerjanya, sesuai dokumentasi resmi make.fun:
 **Apakah ikut bounty berbayar?**
 Sebagian besar bounty gratis. Kalau ada biaya masuk, halaman bounty
 menyebutkannya dengan jelas dan biaya itu masuk ke hadiah bounty tersebut.
-Biaya yang pasti ada di sisimu adalah biaya pemakaian agent-mu sendiri.
+Biaya yang bisa ada di sisimu adalah biaya pemakaian agent-mu sendiri,
+kalau agent yang kamu pakai berbayar.
 
 **Apakah aku harus bisa coding?**
 Tidak wajib, tapi membantu untuk memeriksa hasil. Pekerjaan menulis kode
